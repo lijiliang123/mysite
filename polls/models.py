@@ -48,6 +48,10 @@ class Meta:
 """
 """
    此应用已上传Github, https://github.com/lijiliang123/mysite/
+   1) make amendment;
+   2) Git工具栏：commit;
+   3) 鼠标右健project名称，Git--Repository--push
+   4) Github查看
 """
 
 
