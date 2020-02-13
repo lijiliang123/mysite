@@ -52,6 +52,10 @@ class Meta:
    2) Git工具栏：commit;
    3) 鼠标右健project名称，Git--Repository--push
    4) Github查看
+   从Github下载， https://github.com/lijiliang123/mysite/
+   1) 鼠标右健project名称，Git--Repository--pull
+   2) 或者菜单VCS--Git--pull
+   从github上下载程序更新
 """
 
 
