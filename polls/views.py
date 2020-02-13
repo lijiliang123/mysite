@@ -47,7 +47,10 @@ def vote(request, question_id):
             'error_message': "You didn't select a choice.",
         })
     else:
-        selected_choice.votes += 1
+        # Amend the votes+=1 to votes+=2, push to my Github to test.
+        # by thomas on 2020-2-13 14:56 pm.
+        
+        selected_choice.votes += 2
         selected_choice.save()
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
