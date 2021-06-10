@@ -1,13 +1,4 @@
-from django.shortcuts import render
-import os
 # Create your views here.
-from django.http import HttpResponse, HttpResponseRedirect
-from .models import Student
-from . import models
-from django.template import loader
-from django.shortcuts import render, get_object_or_404
-from django.http import Http404
-from django.urls import reverse
 
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
@@ -22,7 +13,6 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):
-        """Return the last five published questions."""
         """Return the last five published questions."""
 
         return Question.objects.order_by('-pub_date')[:5]
@@ -51,13 +41,14 @@ def vote(request, question_id):
     else:
         # Amend the votes+=1 to votes+=2, push to my Github to test.
         # by thomas on 2020-2-13 14:56 pm.
-        
+
         selected_choice.votes += 2
         selected_choice.save()
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
 
 #    return HttpResponse("您投的票是第 %s 号，谢谢您宝贵的一票." % question_id)
 

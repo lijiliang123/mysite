@@ -60,6 +60,7 @@ class Meta:
 
 
 class Question(models.Model):
+
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published', default=timezone.now)
     question_author = models.CharField(max_length=20)
@@ -86,6 +87,5 @@ class Student(models.Model):
     def __str__(self):
         return self.name
 
-    def calcuage(self):
-        self.age = int(date.today()) - int(self.birthday)
+
 
