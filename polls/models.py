@@ -4,6 +4,7 @@ from django.utils import timezone
 
 # Create your models here.
 """
+以下命令，在Pycharm IDE中的Terminal中运行，运行manage命令，要在包含manage.py文件的目录下才能运行
 ***改变模型需要这三步:***
 1 编辑 models.py 文件，改变模型(数据库结构设计和附加的其它元数据)。
 2 运行 python manage.py makemigrations +应用名称（如polls） 为模型的改变生成迁移文件。
@@ -11,11 +12,18 @@ from django.utils import timezone
 
 常用命令：
 --sqlmigrate 命令接收一个迁移的名称，然后返回对应的 SQL--
+
 python manage.py sqlmigrate polls 0001
 
 --交互式命令行：python manage.py shell
---启动服务器：python manage.py runserver
-
+--启动服务器：python manage.py runserver   
+  修改端口号：python manage.py runserver 9000
+  让其它电脑可以连接到开发服务器：python manage.py runserver 0.0.0.0:8000
+  停止服务器：CTRL + C =shutdown server 
+--使用命令行创建project：
+   django-admin startproject HelloWorld（project 名称），
+   此工程创建命令在Pycharm安装目录下运行即可
+   
 ***我的应用发布地址：***
 http://127.0.0.1:8000/polls/
 http://127.0.0.1:8000/admin/
